@@ -1,0 +1,278 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sleep Token Tarot</title>
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Sleep Token Tarot</h1>
+            <p>Let the divine guide you to a song...</p>
+            
+            <div class="container2">
+                <select id="mood-select">
+                    <option value="Unraveled Hearts">Unraveled Hearts</option>
+                    <option value="Seeking the Light">Seeking the Light</option>
+                    <option value="Unyeild Untouch">Unyeild Untouch</option>
+                </select>
+                <button id="draw-card">Draw a Card</button>
+            </div>
+        
+
+            <div id="result" class="hidden-popup" style="display: none;">
+                <p id="close-popup">X</p>
+            <div class = "popup"> 
+                    <div class="tarot-card">
+                        <img src="unknown/unknown.png" alt="" id="card-image" onerror="console.error('Image failed to load')">
+                    </div>
+
+                    <div class="details"> 
+                        <h2 id="song-title"></h2>
+                        <p id="message"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+
+        <footer>   
+            <script>
+                let songs = [];
+
+                const cards = [
+                // Major Arcana
+                { name: "The Fool", path: "pics/major arcana/major 0 - the fool.png" },
+                { name: "The Magician", path: "pics/major arcana/major 1 - the magician.png" },
+                { name: "The High Priestess", path: "pics/major arcana/major 2 - the high priestess.png" },
+                { name: "The Empress", path: "pics/major arcana/major 3 - the empress.png" },
+                { name: "The Emperor", path: "pics/major arcana/major 4 - the emperor.png" },
+                { name: "The Hierophant", path: "pics/major arcana/major 5 - the hierophant.png" },
+                { name: "The Lovers", path: "pics/major arcana/major 6 - the lovers.png" },
+                { name: "The Chariot", path: "pics/major arcana/major 7 - the chariot.png" },
+                { name: "Strength", path: "pics/major arcana/major 8  - strength.png" },
+                { name: "The Hermit", path: "pics/major arcana/major 9 - the hermit.png" },
+                { name: "Wheel of Fortune", path: "pics/major arcana/major 10 - wheel of fortune.png" },
+                { name: "Justice", path: "pics/major arcana/major 11 - justice.png" },
+                { name: "The Hanged Man", path: "pics/major arcana/major 12 - the hanged man.png" },
+                { name: "Death", path: "pics/major arcana/major 13 - death.png" },
+                { name: "Temperance", path: "pics/major arcana/major 14 - temperance.png" },
+                { name: "The Devil", path: "pics/major arcana/major 15 - the devil.png" },
+                { name: "The Tower", path: "pics/major arcana/major 16 - the tower.png" },
+                { name: "The Star", path: "pics/major arcana/major 17 - the star.png" },
+                { name: "The Moon", path: "pics/major arcana/major 18 - the moon.png" },
+                { name: "The Sun", path: "pics/major arcana/major 19 - the sun.png" },
+                { name: "Judgment", path: "pics/major arcana/major 20 - judgment.png" },
+                { name: "The World", path: "pics/major arcana/major 21 - the world.png" },
+
+                // Swords
+                { name: "Ace of Swords", path: "pics/swords/swords (1).png" },
+                { name: "Two of Swords", path: "pics/swords/swords (2).png" },
+                { name: "Three of Swords", path: "pics/swords/swords (3).png" },
+                { name: "Four of Swords", path: "pics/swords/swords (4).png" },
+                { name: "Five of Swords", path: "pics/swords/swords (5).png" },
+                { name: "Six of Swords", path: "pics/swords/swords (6).png" },
+                { name: "Seven of Swords", path: "pics/swords/swords (7).png" },
+                { name: "Eight of Swords", path: "pics/swords/swords (8).png"  },
+                { name: "Nine of Swords", path: "pics/swords/swords (9).png" },
+                { name: "Ten of Swords", path: "pics/swords/swords (10).png"  },
+                { name: "Page of Swords", path: "pics/swords/swords (11).png"  },
+                { name: "Knight of Swords", path: "pics/swords/swords (12).png" },
+                { name: "Queen of Swords", path: "pics/swords/swords (13).png"  },
+                { name: "King of Swords", path: "pics/swords/swords (14).png"  },
+
+                // Cups
+                { name: "Ace of Cups", path: "pics/cups/cups (1).png" },
+                { name: "Two of Cups", path: "pics/cups/cups (2).png" },
+                { name: "Three of Cups", path: "pics/cups/cups (3).png" },
+                { name: "Four of Cups", path: "pics/cups/cups (4).png" },
+                { name: "Five of Cups", path: "pics/cups/cups (5).png" },
+                { name: "Six of Cups", path: "pics/cups/cups (6).png" },
+                { name: "Seven of Cups", path: "pics/cups/cups (7).png" },
+                { name: "Eight of Cups", path: "pics/cups/cups (8).png" },
+                { name: "Nine of Cups", path: "pics/cups/cups (9).png" },
+                { name: "Ten of Cups", path: "pics/cups/cups (10).png" },
+                { name: "Page of Cups", path: "pics/cups/cups (11).png" },
+                { name: "Knight of Cups", path: "pics/cups/cups (12).png" },
+                { name: "Queen of Cups", path: "pics/cups/cups (13).png" },
+                { name: "King of Cups", path: "pics/cups/cups (14).png" },
+
+                // Pentacles
+                { name: "Ace of Pentacles", path: "pics/pentacles/pentacles (1).png" },
+                { name: "Two of Pentacles", path: "pics/pentacles/pentacles (2).png" },
+                { name: "Three of Pentacles", path: "pics/pentacles/pentacles (3).png" },
+                { name: "Four of Pentacles", path: "pics/pentacles/pentacles (4).png" },
+                { name: "Five of Pentacles", path: "pics/pentacles/pentacles (5).png" },
+                { name: "Six of Pentacles", path: "pics/pentacles/pentacles (6).png" },
+                { name: "Seven of Pentacles", path: "pics/pentacles/pentacles (7).png" },
+                { name: "Eight of Pentacles", path: "pics/pentacles/pentacles (8).png" },
+                { name: "Nine of Pentacles", path: "pics/pentacles/pentacles (9).png" },
+                { name: "Ten of Pentacles", path:  "pics/pentacles/pentacles (10).png" },
+                { name: "Page of Pentacles", path: "pics/pentacles/pentacles (11).png" },
+                { name: "Knight of Pentacles", path: "pics/pentacles/pentacles (12).png" },
+                { name: "Queen of Pentacles", path: "pics/pentacles/pentacles (13).png" },
+                { name: "King of Pentacles", path: "pics/pentacles/pentacles (14).png" },
+
+                // Wands
+                { name: "Ace of Wands", path: "pics/wands/wands (1).png" },
+                { name: "Two of Wands", path: "pics/wands/wands (2).png" },
+                { name: "Three of Wands", path: "pics/wands/wands (3).png" },
+                { name: "Four of Wands", path: "pics/wands/wands (4).png" },
+                { name: "Five of Wands", path: "pics/wands/wands (5).png" },
+                { name: "Six of Wands", path: "pics/wands/wands (6).png" },
+                { name: "Seven of Wands", path: "pics/wands/wands (7).png" },
+                { name: "Eight of Wands", path: "pics/wands/wands (8).png" },
+                { name: "Nine of Wands", path: "pics/wands/wands (9).png" },
+                { name: "Ten of Wands", path: "pics/wands/wands (10).png" },
+                { name: "Page of Wands", path: "pics/wands/wands (11).png" },
+                { name: "Knight of Wands", path: "pics/wands/wands (12).png" },
+                { name: "Queen of Wands", path: "pics/wands/wands (13).png" },
+                { name: "King of Wands", path: "pics/wands/wands (14).png" }
+            ];
+                window.onload = async function () {
+                    songs = await fetchSongs();
+                };
+
+            function resetPopup() {
+                document.getElementById("result").style.display = "none";
+            }
+
+            document.getElementById("draw-card").addEventListener("click", function () {
+                document.getElementById("result").style.display = "flex"; // Show the result
+                processSong();
+            });
+
+            document.getElementById("close-popup").addEventListener("click", function () {
+                resetPopup(); // Hide the popup when "close" is clicked
+            });
+
+                async function fetchSongs() {
+                    const response = await fetch('./songs.txt');
+                    const text = await response.text();
+                    console.log("Songs fetched successfully.");
+                    return text.split('---').filter(line => line.trim() !== '');
+                }
+
+                function processSong() {
+                    const mood = document.getElementById("mood-select").value;
+                    console.log("Selected mood:", mood);
+                    let possibleSongs = [];
+
+                    // Filter songs by mood
+                    songs.forEach(song => {
+                        if (song.includes(`Mood: ${mood}`)) {
+                            console.log("songs found for ", mood, ": ",  song);
+                            possibleSongs.push(song);
+                        }
+                    });
+
+                    if (possibleSongs.length === 0) {
+                        console.error("No songs found for the selected mood.");
+                        return;
+                    }
+
+                    const selectedSong = possibleSongs[Math.floor(Math.random() * possibleSongs.length)];
+                    const songTitle = selectedSong.substring(selectedSong.indexOf("Title:"), selectedSong.indexOf("Mood:")).trim() || "Unknown Title";
+
+                    console.log("selected song: ", songTitle); // Debugging
+
+                    const lyrics = selectedSong.split('--').filter(line => line.trim() !== '');
+
+                    const selectedLyric = lyrics[Math.floor(Math.random() * lyrics.length)];
+                    console.log("selected lyric: ", selectedLyric);
+
+                    const songData = extractSongData(songTitle, selectedLyric);
+                    
+                    console.log("data extracted");
+
+                    updateHTML(songData);
+                }
+
+                function extractSongData(songTitle, lyricText) {
+                    console.log("extracting data");
+
+                    // Extract the lyric
+                    const lyric = lyricText.match(/Lyric:\s*"(.+)"/)?.[1]?.trim() || "Unknown Lyric";
+
+                    // Extract the description
+                    const description = lyricText.match(/Description:\s*"(.+)"/)?.[1]?.trim() || "Unknown Description";
+
+                    // Extract the card name
+                    let card = lyricText.substring(lyricText.indexOf("Card:") + 5, lyricText.indexOf("Lyric:")).trim();
+
+                    // Find the image path for the card
+                    const imagePath = findCard(card);
+
+                    console.log("Card:", card); // Debugging
+                    console.log("Image Path:", imagePath); // Debugging
+                    card = lyricText.substring(lyricText.indexOf("Card:") + 5, lyricText.indexOf("(")).trim();
+                    return { songTitle, card, lyric, description, imagePath };
+                }
+
+                // function findCard(card)
+                // {
+                //     console.log("searching for card: ", card);
+                //     if(card == "Unknown Card")
+                //     {
+                //         console.log("Card not found");
+                //         return "pics/unknown/unknown.png";
+                //     }
+                //     let l = cards.length;
+                //     for(let i = 0; i < l; i++)
+                //     {
+                //         if(card.includes("(Major Arcana)"))
+                //             card = card.substring(0, card.indexOf("(")).trim();
+                //             l = 22;
+                //         if(card.includes("(Swords)"))
+                //         card = card.substring(0, card.indexOf("(")).trim();
+                //         i = 22;
+                //             l = 36;
+                //         if(card.includes("(Cups)"))
+                //         card = card.substring(0, card.indexOf("(")).trim();
+                //         i = 36;
+                //             l = 50;
+                //         if(card.includes("(Pentacles)"))
+                //         card = card.substring(0, card.indexOf("(")).trim();
+                //         i = 50;
+                //             l = 64;
+                //         if(cards[i].name.includes(card))
+                //         {
+                //             return cards[i].path;
+                //         }
+                //     }
+                // }
+
+                function findCard(card) {
+                    console.log("Searching for card:", card);
+
+                    // Remove any parentheses and trim the card name
+                    let cardName = card.replace(/\(.*?\)/g, "").trim();
+
+                    // Find the card in the cards array
+                    const foundCard = cards.find(c => c.name === cardName);
+                    if (foundCard) {
+                        console.log("Card found:", foundCard.path);
+                        return foundCard.path;
+                    } else {
+                        console.log("Card not found in array");
+                        return "pics/unknown/unknown.png";
+                    }
+                }
+
+                function updateHTML(data) {
+                    document.getElementById("song-title").textContent = data.songTitle;
+                    document.getElementById("message").innerHTML = `
+                        <p><strong>Card:</strong> ${data.card}</p>
+                        <p><strong>Lyric:</strong> "${data.lyric}"</p>
+                        <p><strong>Description:</strong> ${data.description}</p>
+                    `;
+                    document.getElementById("card-image").src = data.imagePath;
+                    document.getElementById("card-image").alt = data.card;
+                }
+            </script>
+        </footer>
+    </body>
+    </html>
