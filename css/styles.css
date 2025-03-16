@@ -184,11 +184,12 @@ select:hover {
         width: 90%; 
         height: 220px;
         margin: 10px; 
-        background-color: #000;
+        background-color: rgba(0, 0, 0, 0.8);;
     }
 
     .tarot-card img {
         max-width: 100%; 
+        height: auto;
         max-height: 200px; 
     }
 

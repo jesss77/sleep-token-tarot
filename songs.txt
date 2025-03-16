@@ -769,3 +769,25 @@ Lyric: "I’ll tell him that you didn't make it home, they will know me by the c
 Description: "You are in a moment of introspection, seeking answers in solitude. Trust that clarity will come with time and reflection."  
 ---
 
+Title: Sleep Token - Emergence
+Mood: Unyeild Untouch  
+Card: The Lovers (Major Arcana)
+Lyric: "So go ahead and wrap your arms around me, arms around me, arms around me yeah."
+Description: "You are being called to embrace vulnerability and connection. This is a moment of deep intimacy, where two souls intertwine, and the boundaries between them dissolve. Surrender to the power of love and trust, even if it feels like the edge of an ending."  
+--
+Card: Eight of Wands (Wands)  
+Lyric: "So, come on, come on, out from underneath, who you were."  
+Description: "You are in a moment of rapid transformation and movement. The past is being left behind as you emerge into a new version of yourself. Focus on the momentum and let it carry you forward—this is a time of swift change and clarity."  
+--
+Card: The High Priestess (Major Arcana)
+Lyric: "It's midnight in my mind's eye, drowning up the daylight."  
+Description: "You are being asked to explore the hidden depths of your subconscious. The shadows hold wisdom, and the darkness is a place of revelation. Trust your intuition and uncover what lies beneath the surface of your thoughts and emotions."  
+--
+Card: Death (Major Arcana)
+Lyric: "I have a feeling we're close to the end."  
+Description: "This is a moment of profound transformation and release. Something is coming to a close, making way for rebirth. Embrace the ending, for it is necessary to create space for new beginnings."  
+--
+Card: The Sun (Major Arcana) 
+Lyric: "You might be the one to take away the pain and let my mind go quiet."  
+Description: "You are being guided toward healing and clarity. The light is breaking through, offering warmth and peace. This is a reminder that joy and relief are within reach—let the radiance of hope and renewal fill your spirit."
+
