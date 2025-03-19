@@ -164,9 +164,9 @@ select:hover {
     opacity: 75%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .container {
-        max-width: 90%; 
+        max-width: 70%; 
         padding: 10px; 
     }
 
@@ -184,13 +184,15 @@ select:hover {
         width: 90%; 
         height: 220px;
         margin: 10px; 
-        background-color: rgba(0, 0, 0, 0.8);;
     }
 
     .tarot-card img {
         max-width: 100%; 
         height: auto;
         max-height: 200px; 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     .hidden-popup {
