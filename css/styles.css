@@ -174,8 +174,9 @@ select:hover {
     .tarot-card {
         width: 95%;
         height: 180px;
-        margin: 3px;
+        margin: 5px;
         justify-content: center;
+        align-items: center;
         border: none;
     }
     
@@ -218,8 +219,9 @@ select:hover {
     .tarot-card {
         width: 95%;
         height: 180px;
-        margin: 3px;
+        margin: 5px;
         justify-content: center;
+        align-items: center;
     }
     
     .tarot-card img {
