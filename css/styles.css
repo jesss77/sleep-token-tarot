@@ -157,7 +157,7 @@ select:hover {
 /*phone screen*/
 @media (max-width: 380px) {
     .container {
-        max-width: 90%;
+        max-width: 80%;
         padding: 8px;
     }
     
