@@ -136,7 +136,7 @@ select:hover {
     height: 280px; 
     overflow: hidden; 
     position: relative; 
-    /* Border radius removed as it could imply a background/border */
+    align-items: center;
 }
 
 .tarot-card img {
@@ -146,10 +146,11 @@ select:hover {
     height: auto;
     max-width: 450px;
     max-height: 270px;
-    /* Border radius removed */
     object-fit: contain;
     object-position: center; 
-    opacity: 100%; /* Changed from 75% to 100% for full visibility */
+    opacity: 100%;
+    align-items: center;
+    border-radius: 5px;
 }
 
 /*phone screen*/
