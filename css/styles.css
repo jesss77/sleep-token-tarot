@@ -132,6 +132,7 @@ select:hover {
 }
 
 .tarot-card {
+    top: 5%;
     width: 500px; 
     height: 280px; 
     overflow: hidden; 
@@ -154,6 +155,7 @@ select:hover {
 }
 
 /*phone screen*/
+/*
 @media (max-width: 380px) {
     .container {
         max-width: 90%;
@@ -197,8 +199,9 @@ select:hover {
         font-size: 18px;
     }
 }
-
+*/
 /*phone screen*/
+/*
 @media (min-width: 381px) and (max-width: 500px) {
     .container {
         max-width: 85%; 
@@ -240,7 +243,8 @@ select:hover {
         font-size: 20px; 
     }
 }
-
+*/
+/*
 @media (min-width: 501px) and (max-width: 768px) {
     .container {
         max-width: 80%;
@@ -284,3 +288,4 @@ select:hover {
         max-height: 180px;
     }
 }
+*/
