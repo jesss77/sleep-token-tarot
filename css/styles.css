@@ -185,7 +185,7 @@ select:hover {
     .tarot-card {
         width: 95%;
         height: 180px;
-        margin: 3px auto;
+        margin: 3px;
         justify-content: center;
     }
     
@@ -227,7 +227,7 @@ select:hover {
     .tarot-card {
         width: 95%;
         height: 180px;
-        margin: 3px auto;
+        margin: 3px ;
         justify-content: center;
     }
     
@@ -271,7 +271,6 @@ select:hover {
     @media (max-height: 500px) and (orientation: landscape) {
     body {
         overflow-y: auto;
-        height: auto;
         min-height: 100vh;
     }
     
