@@ -103,10 +103,11 @@ select:hover {
     font-size: 25px;
     padding: 10px;
 }
-.popup
-{
- display: flex;
+
+.popup {
+    display: flex;
 }
+
 #close-popup {
     top: 0px;
     right: 5px;
@@ -126,8 +127,7 @@ select:hover {
     color: #0a0a0a;
 }
 
-.details
-{
+.details {
     align-items: right;
 }
 
@@ -136,7 +136,7 @@ select:hover {
     height: 280px; 
     overflow: hidden; 
     position: relative; 
-    border-radius: 10px;
+    /* Border radius removed as it could imply a background/border */
 }
 
 .tarot-card img {
@@ -146,10 +146,10 @@ select:hover {
     height: auto;
     max-width: 450px;
     max-height: 270px;
-    border-radius: 10px; 
+    /* Border radius removed */
     object-fit: contain;
     object-position: center; 
-    opacity: 75%;
+    opacity: 100%; /* Changed from 75% to 100% for full visibility */
 }
 
 /*phone screen*/
@@ -217,15 +217,13 @@ select:hover {
     .tarot-card {
         width: 95%;
         height: 180px;
-        margin: 3px ;
-        border: none;
+        margin: 3px;
         justify-content: center;
     }
     
     .tarot-card img {
         max-width: 95%;
         max-height: 160px;
-        border: none;
         justify-content: center;
     }
 
@@ -252,17 +250,15 @@ select:hover {
     .tarot-card {
         width: 400px;
         height: 240px;
-        border: none;
     }
     
     .tarot-card img {
-        border: none;
         max-width: 360px;
         max-height: 220px;
     }
 }
 
-    @media (max-height: 500px) and (orientation: landscape) {
+@media (max-height: 500px) and (orientation: landscape) {
     body {
         overflow-y: auto;
         min-height: 100vh;
