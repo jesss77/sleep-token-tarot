@@ -90,17 +90,6 @@ select:hover {
     background-color: #f64a8a;
 }
 
-.tarot-card {
-    background-color: #fca3b7;
-    padding: 5px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-    margin: 20px;
-    display: block;
-    align-items: left;
-}
-
 .hidden-popup {
     position: fixed;
     top: 50%;
@@ -147,7 +136,6 @@ select:hover {
     height: 280px; 
     overflow: hidden; 
     position: relative; 
-    border: 2px solid #000; 
     border-radius: 10px;
 }
 
@@ -187,12 +175,14 @@ select:hover {
         height: 180px;
         margin: 3px;
         justify-content: center;
+        border: none;
     }
     
     .tarot-card img {
         max-width: 95%;
         max-height: 160px;
         justify-content: center;
+        border: none;
     }
     
     .hidden-popup {
@@ -228,12 +218,14 @@ select:hover {
         width: 95%;
         height: 180px;
         margin: 3px ;
+        border: none;
         justify-content: center;
     }
     
     .tarot-card img {
         max-width: 95%;
         max-height: 160px;
+        border: none;
         justify-content: center;
     }
 
@@ -260,9 +252,11 @@ select:hover {
     .tarot-card {
         width: 400px;
         height: 240px;
+        border: none;
     }
     
     .tarot-card img {
+        border: none;
         max-width: 360px;
         max-height: 220px;
     }
