@@ -153,6 +153,7 @@ select:hover {
     align-items: center;
     border-radius: 5px;
 }
+
 @media (max-width: 380px) and (orientation: portrait) {
     body {
         max-width: 50%;
@@ -206,8 +207,9 @@ select:hover {
     }
 }
 
+
 /*phone screen*/
-@media (max-width: 380px) {
+@media (max-width: 380px) and (orientation: portrait) {
     .container {
         max-width: 80%;
         max-height: 70%;
@@ -259,7 +261,7 @@ select:hover {
 }
 
 /*phone screen*/
-@media (min-width: 381px) and (max-width: 500px) {
+@media (min-width: 381px) and (max-width: 500px) and (orientation: portrait){
     .container {
         max-width: 85%; 
         max-height: 75%;
