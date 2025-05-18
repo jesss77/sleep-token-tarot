@@ -259,3 +259,30 @@ select:hover {
         max-height: 180px;
     }
 }
+
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .tarot-card img {
+        max-height: 120px;
+    }
+
+    button,
+    select {
+        font-size: 12px;
+        height: 30px;
+        padding: 6px 8px;
+    }
+
+    .hidden-popup {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    #close-popup {
+        font-size: 14px;
+    }
+}
