@@ -791,3 +791,247 @@ Card: The Sun (Major Arcana)
 Lyric: "You might be the one to take away the pain and let my mind go quiet."  
 Description: "You are being guided toward healing and clarity. The light is breaking through, offering warmth and peace. This is a reminder that joy and relief are within reach—let the radiance of hope and renewal fill your spirit."
 
+
+
+Title: Sleep Token - Look To Windward
+Mood: Seeking the Light  
+Card: Judgment (Major Arcana)  
+Lyric: "Come now, swing wide those gates, 'cause I have paid my penance kindly well in time for judgement day."  
+Description: "You stand at the threshold of reckoning, having completed a cycle of atonement. This is a moment of divine evaluation—your soul is ready for the next phase of existence."  
+--  
+Card: The Tower (Major Arcana)  
+Lyric: "Turns out the gods we thought were dying were just sharpening their blades."  
+Description: "You face a revelation that upends your understanding. What appeared dormant was merely preparing—be ready for sudden, transformative change that cuts through illusion."  
+--  
+Card: The Fool (Major Arcana)  
+Lyric: "No matter how we feel, we've got a taste for one another and a few good years to kill."  
+Description: "You're embracing the adventure of connection despite uncertainty. This journey with another soul may be temporary, but it offers vital experience and joy."  
+--  
+Card: The Hermit (Major Arcana)  
+Lyric: "It seems that even in Arcadia you walk beside me still."  
+Description: "You find that even in paradise, companionship persists. This spiritual presence offers guidance in your solitude—a light that never truly leaves."  
+--  
+Card: Death (Major Arcana)  
+Lyric: "I am the final dawn, I am the flood. And what was missing from those scriptures will be written in my blood."  
+Description: "You embody the ending that precedes rebirth. Your sacrifice completes an unfinished narrative—through transformation, you reveal what was always meant to be."  
+---
+
+Title: Sleep Token - Past Self  
+Mood: Unyield Untouch  
+Card: The Hanged Man (Major Arcana)  
+Lyric: "Are you gonna dance on the line with me? You know it's not a game or a fantasy."  
+Description: "You're suspended between realities, invited to view life from a different perspective. This dance on the edge requires genuine commitment, not escapism."  
+--  
+Card: The Wheel of Fortune (Major Arcana)  
+Lyric: "And I don't even know who I used to be, but nothing is the same, and some things have to change now."  
+Description: "You're in a cycle of transformation that disconnects you from your former identity. Accept this turning point as necessary evolution—embrace change to align with your destiny."  
+--  
+Card: Five of Swords (Swords)  
+Lyric: "Apologising for shit that frankly I stopped thinking of years ago."  
+Description: "You're breaking free from unnecessary guilt and conflict. This is a moment to recognize when battles are no longer yours to fight—let go of old wounds and reclaim your power."  
+--  
+Card: The Star (Major Arcana)  
+Lyric: "If this is love, then I am out of hesitation, head over heels at elevation, walking an inch above the pavement."  
+Description: "You experience hope that lifts you beyond earthly constraints. This connection brings renewal and optimism—allow yourself to be guided by its light toward healing."  
+--  
+Card: The Fool (Major Arcana)  
+Lyric: "I just don't wanna be lost again."  
+Description: "You stand at the precipice of a new journey, wary of previous missteps. Trust that each beginning offers fresh wisdom—embrace this path with eyes open to both possibility and pitfall."
+
+---
+
+Title: Sleep Token - Dangerous  
+Mood: Unraveled Hearts  
+Card: The Lovers (Major Arcana)  
+Lyric: "It's like you're dangerous to me / I notice every time we meet"  
+Description: You're drawn to an irresistible connection—magnetic, fated, but laced with risk. The Lovers speaks to a choice between desire and safety, beckoning you to consider what you're truly committing to.
+
+--  
+Card: The Moon (Major Arcana)  
+Lyric: "You've got me talking in my sleep / As if you're conquering my dreams"  
+Description: The Moon reveals the blurry line between dreams and reality. You're influenced by unseen forces, haunted by obsession or illusion—trust your intuition, but beware of delusion.
+
+--  
+Card: Knight of Wands (Wands)  
+Lyric: "Well, I thought I could resist you / But something in me just can't help but insist"  
+Description: This is a moment of reckless passion and impulsive pursuit. The Knight of Wands thrives on fire and movement—but such intensity can consume just as easily as it ignites.
+
+--  
+Card: Ten of Swords (Swords)  
+Lyric: "And I am caught in time / Like clockwork beneath the permafrost"  
+Description: The Ten of Swords signals a painful end or betrayal that lingers. You are frozen in a cycle of loss, yet its very finality holds the first seeds of release.
+
+--  
+Card: Temperance (Major Arcana)  
+Lyric: "Won't you show me how to dance forever?"  
+Description: Temperance invites balance and healing through union. You're seeking harmony within chaos—a sacred dance between extremes, where opposites can blend if tended with care.
+
+---
+
+Title: Sleep Token - Caramel  
+Mood: Unyield Untouch  
+Card: The Tower (Major Arcana)  
+Lyric: "Right foot in the roses, left foot on a landmine"  
+Description: The Tower brings a sudden collapse—jarring, painful, but necessary. You're standing in beauty and destruction at once, and the only way forward is through transformation.
+
+--  
+Card: Nine of Wands (Wands)  
+Lyric: "Backed up into corners, bitter in the lens, I'm / Sick of trying to hide it every time they take mine"  
+Description: Exhausted but enduring—the Nine of Wands reflects the toll of repeated emotional battles. You're guarding what remains, waiting for the final blow or breakthrough.
+
+--  
+Card: Seven of Cups (Cups)  
+Lyric: "Can I get a mirror side-stage, looking sideways at my own visage?"  
+Description: The Seven of Cups brings confusion, illusion, and fractured self-perception. You're surrounded by possibilities, but clarity only comes when you choose what is true.
+
+--  
+Card: The Devil (Major Arcana)  
+Lyric: "Stick to me, stick to me like caramel / Walk beside me till you feel nothing as well"  
+Description: You're bound in a seductive entanglement—sweet on the surface, hollow underneath. The Devil exposes the cost of comfort at the expense of freedom.
+
+--  
+Card: The World (Major Arcana)  
+Lyric: "Too young to get bitter over it all / Too old to retaliate like before"  
+Description: The World marks a completion. You've come full circle, carrying both wisdom and weariness. Now, the question is how you’ll use what you’ve learned.
+
+---
+
+Title: Sleep Token - Even in Arcadia  
+Mood: Seeking the Light  
+Card: Judgement (Major Arcana)  
+Lyric: "Come now, swing wide those gates / 'Cause I have paid my penance kindly well in time for judgement day"  
+Description: Judgement signals a reckoning, a call to rise. You’re being summoned to account for the past, to shed the old self and step into your rebirth.
+
+--  
+Card: The Hierophant (Major Arcana)  
+Lyric: "Turns out the gods we thought were dying were just sharpening their blades"  
+Description: Sacred systems aren’t always safe. The Hierophant asks you to examine inherited beliefs and challenge authority—seek your own truth within tradition.
+
+--  
+Card: Ace of Cups (Cups)  
+Lyric: "We've got a taste for one another and a few good years to kill"  
+Description: This is the promise of new love or emotional renewal. The Ace of Cups offers a flood of feeling—pure, raw, and overflowing with potential.
+
+--  
+Card: The Empress (Major Arcana)  
+Lyric: "It seems that even in Arcadia you walk beside me still"  
+Description: The Empress embodies love that transcends time. She's memory, creation, and comfort—the sacred feminine in bloom, even amid loss.
+
+--  
+Card: Six of Swords (Swords)  
+Lyric: "No matter what is real"  
+Description: You're in transition, floating between what was and what’s next. The Six of Swords asks you to leave behind the pain and let the current carry you forward.
+
+---
+
+Title: Sleep Token - Provider  
+Mood: Unraveled Hearts  
+Card: The Emperor (Major Arcana)  
+Lyric: "I wanna be a provider / Your guiding hand / Your final decider"  
+Description: The Emperor seeks to protect and lead—but at what cost? You crave control and security, but must avoid becoming a fortress instead of a shelter.
+
+--  
+Card: Page of Wands (Wands)  
+Lyric: "Caught up on you / Do I wanna go there? Yes, I do"  
+Description: This is the thrill of new beginnings and open-hearted pursuit. The Page of Wands brings curiosity and courage—but beware naïveté.
+
+--  
+Card: Two of Pentacles (Pentacles)  
+Lyric: "Each other / I felt myself hesitate"  
+Description: You’re juggling feelings, unsure whether to commit or retreat. The Two of Pentacles shows emotional balancing—you're trying to keep it all afloat.
+
+--  
+Card: Queen of Cups (Cups)  
+Lyric: "And our bodies converse like old friends / Exchanging the years in silence"  
+Description: The Queen of Cups brings deep intuition and quiet connection. You're feeling something ancient and tender—a love spoken without words.
+
+--  
+Card: The Magician (Major Arcana)  
+Lyric: "I can give you what you want"  
+Description: You hold the tools to manifest your desires. The Magician is power, charisma, and potential—but only if you act with intention and truth.
+
+---
+
+Title: Sleep Token - Damocles  
+Mood: Unyield Untouch  
+Card: Eight of Swords (Swords)  
+Lyric: "No one else knows that I've got a problem"  
+Description: You're trapped by invisible chains—fear, shame, or silence. The Eight of Swords asks you to name the prison, because only then can you escape it.
+
+--  
+Card: The Tower (Major Arcana)  
+Lyric: "Well, I've been waking up under blades / Blue blossom days"  
+Description: The Tower is destruction and awakening. Your comfort is crumbling, but what falls away clears the way for radical clarity.
+
+--  
+Card: The Star (Major Arcana)  
+Lyric: "When the river runs dry and the curtain is called / How will I know if I can't see the bottom?"  
+Description: After devastation, The Star offers hope. You’re asked to trust what you can’t yet see—to believe in healing before the wound closes.
+
+--  
+Card: Four of Cups (Cups)  
+Lyric: "I know these chords are boring / But I can't always be killing the game"  
+Description: Apathy creeps in. The Four of Cups invites you to reconnect with what matters—look up, or you’ll miss the gift in front of you.
+
+--  
+Card: Death (Major Arcana)  
+Lyric: "Who will I be when the empire falls?"  
+Description: This is identity collapse and transformation. Death asks you to shed the skin of who you were so you can become who you’re meant to be.
+
+---
+
+Title: Sleep Token - Gethsemane  
+Mood: Unraveled Hearts  
+Card: Five of Cups (Cups)  
+Lyric: "You never saw me naked, you wouldn't even touch me / Except if you were wasted"  
+Description: The Five of Cups mourns love lost or withheld. There’s grief here—for what wasn’t given, and for the self that went unseen.
+
+--  
+Card: The Chariot (Major Arcana)  
+Lyric: "I was your robot companion, you were my favourite colour"  
+Description: You moved for them, not for yourself. The Chariot calls you to reclaim agency—drive forward with purpose, no longer running on someone else's will.
+
+--  
+Card: The Devil (Major Arcana)  
+Lyric: "Do you wanna hurt me? 'Cause nobody hurts me better"  
+Description: The Devil reveals a toxic dance between desire and destruction. You’re entangled in pain disguised as passion—it’s time to cut the cord.
+
+--  
+Card: Nine of Swords (Swords)  
+Lyric: "Thought I was waiting for you, when all along / It was you with the countdown kill switch"  
+Description: This is anxiety, betrayal, and obsessive thought. The Nine of Swords traps you in your head—healing begins when truth is faced in the light.
+
+--  
+Card: Strength (Major Arcana)  
+Lyric: "I've learned to live beside it / And even though it's over now, I will always be reminded"  
+Description: Strength is quiet resilience. You carry your scars, not with shame but grace. This card says: you endured, and that is power.
+
+---
+
+Title: Sleep Token - Infinite Baths  
+Mood: Seeking the Light  
+Card: The Fool (Major Arcana)  
+Lyric: "I have fought so long to be here / I am never going back"  
+Description: The Fool begins again. With innocence and courage, you step into the unknown—liberated from the past, open to the sacred possibilities of now.
+
+--  
+Card: The Sun (Major Arcana)  
+Lyric: "Bursting colours when you laugh"  
+Description: This is joy in its purest form. The Sun brings clarity, warmth, and renewal—you are seen, celebrated, and alive.
+
+--  
+Card: Six of Wands (Wands)  
+Lyric: "Even if I'm on my own / When the silence is deafening"  
+Description: You rise alone, and that's enough. The Six of Wands recognizes quiet victories, especially the kind no one else can see.
+
+--  
+Card: Queen of Pentacles (Pentacles)  
+Lyric: "And the waters are warm / Where they used to run freezing"  
+Description: You’ve created your own peace. The Queen of Pentacles grounds you in self-worth, nurturing your life like a garden grown by your own hands.
+
+--  
+Card: Justice (Major Arcana)  
+Lyric: "All this glory you did not earn / Every lesson you did not learn"  
+Description: Justice demands balance. Whether reckoning or release, this card ensures the scales will be righted—by your hand, or by fate.
+
+---

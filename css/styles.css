@@ -17,18 +17,10 @@ body {
     align-items: center;
 }
 
-.left {
-    left: 5%;
-}
-
-.right {
-    right: 5%;
-}
-
 .container {
     position: relative;
-    max-width: 800px;  
-    padding: 20px; 
+    max-width: 800px;
+    padding: 20px;
     border: 1px solid #f64a8a;
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.8);
@@ -40,10 +32,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 h1 {
-    font-size: 46px; 
+    font-size: 46px;
     font-family: "SpellBound", serif;
 }
 
@@ -51,12 +44,12 @@ button {
     background: #fca3b7;
     color: #0a0a0a;
     border: none;
-    padding: 15px 30px;  
+    padding: 15px 30px;
     cursor: pointer;
     margin: 10px;
     border-radius: 5px;
     font-family: "SpellBound", serif;
-    font-size: 20px; 
+    font-size: 20px;
     height: 50px;
 }
 
@@ -68,11 +61,12 @@ select {
     background-color: #fca3b7;
     color: #0a0a0a;
     font-family: "SpellBound", serif;
-    padding: 15px 30px;  
+    padding: 15px 30px;
     border-radius: 5px;
     font-size: 20px;
     cursor: pointer;
     height: 50px;
+    margin: 10px;
 }
 
 option {
@@ -102,10 +96,16 @@ select:hover {
     border-radius: 10px;
     font-size: 25px;
     padding: 10px;
+    width: 95%;
+    max-width: 600px;
 }
 
 .popup {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 #close-popup {
@@ -127,44 +127,95 @@ select:hover {
     color: #0a0a0a;
 }
 
-.details {
-    align-items: right;
-}
-
 .tarot-card {
-    top: 10px;
-    width: 500px; 
-    height: 280px; 
-    overflow: hidden; 
-    position: relative; 
+    display: flex;
+    justify-content: center;
     align-items: center;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
 }
 
 .tarot-card img {
-    opacity: 100%;
-    margin: 5px;    
-    position: relative;
-    width: auto; 
-    height: auto;
-    max-width: 450px;
+    max-width: 100%;
     max-height: 270px;
     object-fit: contain;
-    object-position: center; 
-    align-items: center;
     border-radius: 5px;
 }
 
-@media (max-width: 380px) and (orientation: portrait) {
-    body {
-        max-width: 50%;
-        max-height: 50%;
-        min-height: 100vh;
+.details {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
     }
 
     .container {
         max-width: 90%;
-        max-height: 80%;
+        padding: 15px;
+    }
+
+    .tarot-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .tarot-card img {
+        max-width: 100%;
+        max-height: 220px;
+    }
+
+    button,
+    select {
+        font-size: 16px;
+        padding: 10px 20px;
+        height: 40px;
+        margin: 5px;
+    }
+
+    .hidden-popup {
+        width: 90%;
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    #close-popup {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .tarot-card img {
+        max-height: 180px;
+    }
+
+    .hidden-popup {
+        font-size: 16px;
+    }
+
+    #close-popup {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 380px) {
+    .container {
+        max-width: 95%;
         padding: 10px;
+    }
+
+    .tarot-card img {
+        max-height: 150px;
     }
 
     h1 {
@@ -172,170 +223,20 @@ select:hover {
         margin: 10px 0;
     }
 
-    button, select {
-        padding: 6px 12px;
-        font-size: 12px;
-        height: 32px;
-        margin: 4px;
-    }
-
-    .tarot-card {
-        width: 90%;
-        height: 150px;
-        margin: 5px auto;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .tarot-card img {
-        width: 135px;
-        height: 140px;
-        object-fit: contain;
-        object-position: center;
-        align-items: center;
-        border-radius: 5px;
+    button,
+    select {
+        font-size: 14px;
+        height: 36px;
+        padding: 8px 12px;
     }
 
     .hidden-popup {
-        width: 90%;
         font-size: 14px;
         padding: 10px;
     }
 
     #close-popup {
         font-size: 16px;
-    }
-}
-
-
-/*phone screen*/
-@media (max-width: 380px) and (orientation: portrait) {
-    .container {
-        max-width: 80%;
-        max-height: 70%;
-        padding: 8px;
-    }
-    
-    h1 {
-        font-size: 28px;
-    }
-    
-    button, select {
-        padding: 8px 16px;
-        font-size: 14px;
-        height: 36px;
-        margin: 5px;
-    }
-    
-    .tarot-card {
-        width: 95%;
-        height: 180px;
-        margin: 5px;
-        justify-content: center;
-        align-items: center;
-        border: none;
-    }
-    
-    .tarot-card img {
-        max-width: 95%;
-        max-height: 170px;
-        position: relative;
-        width: auto; 
-        height: auto;
-        object-fit: contain;
-        object-position: center; 
-        align-items: center;
-        justify-content: center;
-        border-radius: 5px;
-    }
-    
-    .hidden-popup {
-        width: 85%;
-        font-size: 16px;
-        padding: 12px;
-    }
-    
-    #close-popup {
-        font-size: 18px;
-    }
-}
-
-/*phone screen*/
-@media (min-width: 381px) and (max-width: 500px) and (orientation: portrait){
-    .container {
-        max-width: 85%; 
-        max-height: 75%;
-        padding: 10px; 
-    }
-
-    h1 {
-        font-size: 32px; 
-    }
-
-    button, select {
-        padding: 10px 20px; 
-        font-size: 16px; 
-        height: 40px; 
-        margin: 8px;
-    }
-
-    .tarot-card {
-        width: 95%;
-        height: 180px;
-        margin: 5px;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .tarot-card img {
-        max-width: 95%;
-        max-height: 160px;
-        justify-content: center;
-        position: relative;
-        width: auto; 
-        height: auto;
-        object-fit: contain;
-        object-position: center; 
-        align-items: center;
-        border-radius: 5px;
-    }
-
-    .hidden-popup {
-        width: 80%; 
-        font-size: 18px; 
-        padding: 15px; 
-    }
-
-    #close-popup {
-        font-size: 20px; 
-    }
-}
-
-@media (min-width: 501px) and (max-width: 768px) {
-    .container {
-        max-width: 80%;
-    }
-    
-    h1 {
-        font-size: 38px;
-    }
-    
-    .tarot-card {
-        width: 400px;
-        height: 240px;
-    }
-    
-    .tarot-card img {
-        max-width: 360px;
-        max-height: 220px;
-        position: relative;
-        width: auto; 
-        height: auto;
-        object-fit: contain;
-        object-position: center; 
-        align-items: center;
-        border-radius: 5px;
-        justify-content: center;
     }
 }
 
@@ -344,29 +245,17 @@ select:hover {
         overflow-y: auto;
         min-height: 100vh;
     }
-    
+
     .container {
         margin: 15px auto;
     }
-    
+
     h1 {
         font-size: 30px;
         margin: 10px 0;
     }
-    
-    .tarot-card {
-        height: 200px;
-    }
-    
+
     .tarot-card img {
         max-height: 180px;
-        position: relative;
-        width: auto; 
-        height: auto;
-        object-fit: contain;
-        object-position: center; 
-        align-items: center;
-        border-radius: 5px;
-        justify-content: center;
     }
 }

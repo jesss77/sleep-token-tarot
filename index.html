@@ -1,49 +1,44 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sleep Token Tarot</title>
-        <link rel="stylesheet" href="./css/styles.css">
-    </head>
-    <body>
-        <div class="container">
-            <h1>Sleep Token Tarot</h1>
-            <p>Let the divine guide you to a song...</p>
-            
-            <div class="container2">
-                <select id="mood-select">
-                    <option value="Unraveled Hearts">Unraveled Hearts</option>
-                    <option value="Seeking the Light">Seeking the Light</option>
-                    <option value="Unyeild Untouch">Unyeild Untouch</option>
-                </select>
-                <button id="draw-card">Draw a Card</button>
-            </div>
-        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Token Tarot</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sleep Token Tarot</h1>
+        <p>Let the divine guide you to a song...</p>
 
-            <div id="result" class="hidden-popup" style="display: none;">
-                <p id="close-popup">X</p>
-            <div class = "popup"> 
-                    <div class="tarot-card">
-                        <img src="unknown/unknown.png" alt="" id="card-image" onerror="console.error('Image failed to load')">
-                    </div>
+        <div class="container2">
+            <select id="mood-select">
+                <option value="Unraveled Hearts">Unraveled Hearts</option>
+                <option value="Seeking the Light">Seeking the Light</option>
+                <option value="Unyeild Untouch">Unyeild Untouch</option>
+            </select>
+            <button id="draw-card">Draw a Card</button>
+        </div>
 
-                    <div class="details"> 
-                        <h2 id="song-title"></h2>
-                        <p id="message"></p>
-                    </div>
+        <div id="result" class="hidden-popup" style="display: none;">
+            <p id="close-popup">X</p>
+            <div class="popup"> 
+                <div class="tarot-card">
+                    <img src="unknown/unknown.png" alt="" id="card-image" onerror="console.error('Image failed to load')">
+                </div>
+                <div class="details"> 
+                    <h2 id="song-title"></h2>
+                    <p id="message"></p>
                 </div>
             </div>
         </div>
-        
-        
+    </div>
 
+    <footer>   
+        <script>
+            let songs = [];
 
-        <footer>   
-            <script>
-                let songs = [];
-
-                const cards = [
+            const cards = [
                 // Major Arcana
                 { name: "The Fool", path: "pics/major arcana/major 0 - the fool.png" },
                 { name: "The Magician", path: "pics/major arcana/major 1 - the magician.png" },
@@ -110,7 +105,7 @@
                 { name: "Seven of Pentacles", path: "pics/pentacles/pentacles (7).png" },
                 { name: "Eight of Pentacles", path: "pics/pentacles/pentacles (8).png" },
                 { name: "Nine of Pentacles", path: "pics/pentacles/pentacles (9).png" },
-                { name: "Ten of Pentacles", path:  "pics/pentacles/pentacles (10).png" },
+                { name: "Ten of Pentacles", path: "pics/pentacles/pentacles (10).png" },
                 { name: "Page of Pentacles", path: "pics/pentacles/pentacles (11).png" },
                 { name: "Knight of Pentacles", path: "pics/pentacles/pentacles (12).png" },
                 { name: "Queen of Pentacles", path: "pics/pentacles/pentacles (13).png" },
@@ -132,147 +127,74 @@
                 { name: "Queen of Wands", path: "pics/wands/wands (13).png" },
                 { name: "King of Wands", path: "pics/wands/wands (14).png" }
             ];
-                window.onload = async function () {
-                    songs = await fetchSongs();
-                };
+
+            window.onload = async function () {
+                songs = await fetchSongs();
+            };
 
             function resetPopup() {
                 document.getElementById("result").style.display = "none";
             }
 
             document.getElementById("draw-card").addEventListener("click", function () {
-                document.getElementById("result").style.display = "flex"; // Show the result
+                document.getElementById("result").style.display = "flex";
                 processSong();
             });
 
             document.getElementById("close-popup").addEventListener("click", function () {
-                resetPopup(); // Hide the popup when "close" is clicked
+                resetPopup();
             });
 
-                async function fetchSongs() {
-                    const response = await fetch('./songs.txt');
-                    const text = await response.text();
-                    console.log("Songs fetched successfully.");
-                    return text.split('---').filter(line => line.trim() !== '');
+            async function fetchSongs() {
+                const response = await fetch('./songs.txt');
+                const text = await response.text();
+                return text.split('---').filter(line => line.trim() !== '');
+            }
+
+            function processSong() {
+                const mood = document.getElementById("mood-select").value;
+                const possibleSongs = songs.filter(song => song.includes(`Mood: ${mood}`));
+
+                if (possibleSongs.length === 0) {
+                    console.error("No songs found for the selected mood.");
+                    return;
                 }
 
-                function processSong() {
-                    const mood = document.getElementById("mood-select").value;
-                    console.log("Selected mood:", mood);
-                    let possibleSongs = [];
+                const selectedSong = possibleSongs[Math.floor(Math.random() * possibleSongs.length)];
+                const songTitle = selectedSong.substring(selectedSong.indexOf("Title:"), selectedSong.indexOf("Mood:")).trim();
 
-                    // Filter songs by mood
-                    songs.forEach(song => {
-                        if (song.includes(`Mood: ${mood}`)) {
-                            console.log("songs found for ", mood, ": ",  song);
-                            possibleSongs.push(song);
-                        }
-                    });
+                const lyrics = selectedSong.split('--').filter(line => line.trim() !== '');
+                const selectedLyric = lyrics[Math.floor(Math.random() * lyrics.length)];
 
-                    if (possibleSongs.length === 0) {
-                        console.error("No songs found for the selected mood.");
-                        return;
-                    }
+                const songData = extractSongData(songTitle, selectedLyric);
+                updateHTML(songData);
+            }
 
-                    const selectedSong = possibleSongs[Math.floor(Math.random() * possibleSongs.length)];
-                    const songTitle = selectedSong.substring(selectedSong.indexOf("Title:"), selectedSong.indexOf("Mood:")).trim() || "Unknown Title";
+            function extractSongData(songTitle, lyricText) {
+                const lyric = lyricText.match(/Lyric:\s*"(.+?)"/)?.[1]?.trim() || "Unknown Lyric";
+                const description = lyricText.match(/Description:\s*["“]?(.+?)["”]?$/m)?.[1]?.trim() || "Unknown Description";
+                const card = lyricText.substring(lyricText.indexOf("Card:") + 5, lyricText.indexOf("Lyric:")).trim();
+                const cardName = card.replace(/\(.*?\)/g, "").trim();
+                const imagePath = findCard(cardName);
+                return { songTitle, card: cardName, lyric, description, imagePath };
+            }
 
-                    console.log("selected song: ", songTitle); // Debugging
+            function findCard(cardName) {
+                const foundCard = cards.find(c => c.name === cardName);
+                return foundCard ? foundCard.path : "pics/unknown/unknown.png";
+            }
 
-                    const lyrics = selectedSong.split('--').filter(line => line.trim() !== '');
-
-                    const selectedLyric = lyrics[Math.floor(Math.random() * lyrics.length)];
-                    console.log("selected lyric: ", selectedLyric);
-
-                    const songData = extractSongData(songTitle, selectedLyric);
-                    
-                    console.log("data extracted");
-
-                    updateHTML(songData);
-                }
-
-                function extractSongData(songTitle, lyricText) {
-                    console.log("extracting data");
-
-                    // Extract the lyric
-                    const lyric = lyricText.match(/Lyric:\s*"(.+)"/)?.[1]?.trim() || "Unknown Lyric";
-
-                    // Extract the description
-                    const description = lyricText.match(/Description:\s*"(.+)"/)?.[1]?.trim() || "Unknown Description";
-
-                    // Extract the card name
-                    let card = lyricText.substring(lyricText.indexOf("Card:") + 5, lyricText.indexOf("Lyric:")).trim();
-
-                    // Find the image path for the card
-                    const imagePath = findCard(card);
-
-                    console.log("Card:", card); // Debugging
-                    console.log("Image Path:", imagePath); // Debugging
-                    card = lyricText.substring(lyricText.indexOf("Card:") + 5, lyricText.indexOf("(")).trim();
-                    return { songTitle, card, lyric, description, imagePath };
-                }
-
-                // function findCard(card)
-                // {
-                //     console.log("searching for card: ", card);
-                //     if(card == "Unknown Card")
-                //     {
-                //         console.log("Card not found");
-                //         return "pics/unknown/unknown.png";
-                //     }
-                //     let l = cards.length;
-                //     for(let i = 0; i < l; i++)
-                //     {
-                //         if(card.includes("(Major Arcana)"))
-                //             card = card.substring(0, card.indexOf("(")).trim();
-                //             l = 22;
-                //         if(card.includes("(Swords)"))
-                //         card = card.substring(0, card.indexOf("(")).trim();
-                //         i = 22;
-                //             l = 36;
-                //         if(card.includes("(Cups)"))
-                //         card = card.substring(0, card.indexOf("(")).trim();
-                //         i = 36;
-                //             l = 50;
-                //         if(card.includes("(Pentacles)"))
-                //         card = card.substring(0, card.indexOf("(")).trim();
-                //         i = 50;
-                //             l = 64;
-                //         if(cards[i].name.includes(card))
-                //         {
-                //             return cards[i].path;
-                //         }
-                //     }
-                // }
-
-                function findCard(card) {
-                    console.log("Searching for card:", card);
-
-                    // Remove any parentheses and trim the card name
-                    let cardName = card.replace(/\(.*?\)/g, "").trim();
-
-                    // Find the card in the cards array
-                    const foundCard = cards.find(c => c.name === cardName);
-                    if (foundCard) {
-                        console.log("Card found:", foundCard.path);
-                        return foundCard.path;
-                    } else {
-                        console.log("Card not found in array");
-                        return "pics/unknown/unknown.png";
-                    }
-                }
-
-                function updateHTML(data) {
-                    document.getElementById("song-title").textContent = data.songTitle;
-                    document.getElementById("message").innerHTML = `
-                        <p><strong>Card:</strong> ${data.card}</p>
-                        <p><strong>Lyric:</strong> "${data.lyric}"</p>
-                        <p><strong>Description:</strong> ${data.description}</p>
-                    `;
-                    document.getElementById("card-image").src = data.imagePath;
-                    document.getElementById("card-image").alt = data.card;
-                }
-            </script>
-        </footer>
-    </body>
-    </html>
+            function updateHTML(data) {
+                document.getElementById("song-title").textContent = data.songTitle;
+                document.getElementById("message").innerHTML = `
+                    <p><strong>Card:</strong> ${data.card}</p>
+                    <p><strong>Lyric:</strong> "${data.lyric}"</p>
+                    <p><strong>Description:</strong> ${data.description}</p>
+                `;
+                document.getElementById("card-image").src = data.imagePath;
+                document.getElementById("card-image").alt = data.card;
+            }
+        </script>
+    </footer>
+</body>
+</html>
